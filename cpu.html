@@ -1,11 +1,11 @@
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgpu/dist/tf-backend-webgpu.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl/dist/tf-backend-webgl.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix/dist/body-pix.min.js"></script>
     <script>
       console.log(tf.version);
-      tf.setBackend('webgpu').then(async () => {
+      tf.setBackend('cpu').then(async () => {
         const net = await bodyPix.load();
 
         // input source
